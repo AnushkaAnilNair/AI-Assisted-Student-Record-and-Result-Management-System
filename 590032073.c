@@ -278,7 +278,7 @@ void averageCGPA() {
 
 void sortBySAP() {
     int i, j;
-    Student temp;
+    struct Student temp;
 
     for (i = 0; i < count - 1; i++) {
         for (j = i + 1; j < count; j++) {
@@ -296,7 +296,7 @@ void sortBySAP() {
 
 void sortByName() {
     int i, j;
-    Student temp;
+    struct Student temp;
 
     for (i = 0; i < count - 1; i++) {
         for (j = i + 1; j < count; j++) {
