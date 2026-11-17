@@ -1,0 +1,89 @@
+STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+SAMPLE OUTPUT
+
+========================================
+TEST CASE 1 - EXCELLENT PERFORMANCE
+========================================
+
+Menu Choice: 9
+Enter SAP ID: 50001150
+
+===== AI-ASSISTED ACADEMIC ADVISOR =====
+Student Name: Neha Gupta
+CGPA: 9.41
+Excellent Performance
+Advice: Maintain your current study pattern.
+
+Result: PASS
+
+
+========================================
+TEST CASE 2 - GOOD PERFORMANCE
+========================================
+
+Menu Choice: 9
+Enter SAP ID: 50001234
+
+===== AI-ASSISTED ACADEMIC ADVISOR =====
+Student Name: Aarav Sharma
+CGPA: 8.65
+Good Performance
+Advice: Keep practising and aim for higher grades.
+
+Result: PASS
+
+
+========================================
+TEST CASE 3 - NEEDS IMPROVEMENT
+========================================
+
+Menu Choice: 2
+
+Enter SAP ID: 50001400
+Enter roll number: R006
+Enter name: Test Student
+Enter phone number: 9876500000
+Enter email: test@example.com
+Enter year (1-4): 1
+Enter current semester (1-8): 2
+
+Enter SGPA for completed semesters.
+Enter 0 if result is unavailable.
+
+Semester 1 SGPA: 6.0
+Semester 2 SGPA: 5.5
+
+Student added successfully.
+
+Menu Choice: 9
+Enter SAP ID: 50001400
+
+===== AI-ASSISTED ACADEMIC ADVISOR =====
+Student Name: Test Student
+CGPA: 5.75
+Needs Improvement
+Advice: Focus more on subjects with lower SGPA.
+
+Result: PASS
+
+
+========================================
+EXIT
+========================================
+
+Menu Choice: 10
+
+Goodbye!
+
+
+========================================
+TEST SUMMARY
+========================================
+
+Test Case 1: Excellent Performance - PASS
+Test Case 2: Good Performance - PASS
+Test Case 3: Needs Improvement - PASS
+
+Total Test Cases: 3
+Passed: 3
+Failed: 0
