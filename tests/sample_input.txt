@@ -1,0 +1,39 @@
+# Sample Input - Student Record and Result Management System
+
+## Test Case 1 - Excellent Performance
+
+Menu Choice: 9  
+Enter SAP ID: 50001150
+
+Student: Neha Gupta  
+SGPA Values: 9.5, 9.2, 9.4, 9.1, 9.6, 9.3, 9.5, 9.7
+
+## Test Case 2 - Good Performance
+
+Menu Choice: 9  
+Enter SAP ID: 50001234
+
+Student: Aarav Sharma  
+SGPA Values: 8.5, 8.8
+
+## Test Case 3 - Needs Improvement
+
+First, add a new student using Menu Choice 2.
+
+SAP ID: 50001400  
+Roll Number: R006  
+Name: Test Student  
+Phone Number: 9876500000  
+Email ID: test@example.com  
+Year: 1  
+Semester: 2  
+Semester 1 SGPA: 6.0  
+Semester 2 SGPA: 5.5
+
+Then select Menu Choice 9.
+
+Enter SAP ID: 50001400
+
+## Exit
+
+Menu Choice: 10
