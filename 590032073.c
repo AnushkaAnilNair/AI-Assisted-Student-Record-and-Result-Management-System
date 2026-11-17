@@ -312,6 +312,52 @@ void sortByName() {
     displayAll();
 }
 
+void academicAdvisor() {
+    int i;
+    long long sap;
+    float cgpa;
+
+    printf("Enter SAP ID: ");
+    sap = readSAP();
+
+    i = findStudent(sap);
+
+    if (i == -1) {
+        printf("Student not found.\n");
+        return;
+    }
+
+    cgpa = getCGPA(i);
+
+    printf("\n===== AI-ASSISTED ACADEMIC ADVISOR =====\n");
+    printf("Student Name: %s\n", students[i].name);
+    printf("CGPA: %.2f\n", cgpa);
+
+    if (cgpa == 0) {
+        printf("No SGPA results available.\n");
+    }
+    else if (cgpa >= 9.0 && cgpa <= 10.0) {
+        printf("Excellent Performance\n");
+        printf("Advice: Maintain your current study pattern.\n");
+    }
+    else if (cgpa >= 7.0 && cgpa < 9.0) {
+        printf("Good Performance\n");
+        printf("Advice: Keep practising and aim for higher grades.\n");
+    }
+    else if (cgpa >= 5.0 && cgpa < 7.0) {
+        printf("Needs Improvement\n");
+        printf("Advice: Focus more on subjects with lower SGPA.\n");
+    }
+    else if (cgpa > 0.0 && cgpa < 5.0) {
+        printf("Requires Immediate Attention\n");
+        printf("Advice: Seek guidance from teachers and study regularly.\n");
+    }
+    else {
+        printf("Invalid CGPA.\n");
+    }
+}
+
+
 int main() {
     int choice;
 
@@ -325,7 +371,8 @@ int main() {
         printf("6. Average CGPA by year\n");
         printf("7. Sort by SAP ID\n");
         printf("8. Sort by Name\n");
-        printf("9. Exit\n");
+        printf("9. AI-Assisted Academic Advisor\n");
+        printf("10. Exit\n");
 
         printf("Enter choice: ");
         choice = readNumber();
@@ -364,6 +411,10 @@ int main() {
                 break;
 
             case 9:
+                academicAdvisor();
+                break;
+
+            case 10:
                 printf("Goodbye!\n");
                 break;
 
@@ -371,7 +422,7 @@ int main() {
                 printf("Invalid choice.\n");
         }
 
-    } while (choice != 9);
+    } while (choice != 10);
 
     return 0;
 }
