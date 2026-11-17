@@ -110,19 +110,152 @@ void displayAll() {
         printStudent(i);
     }
 }
+
+void addStudent() {
+    int j, year, sem;
+    long long sap;
+
+    if (count == MAX) {
+        printf("Student list is full.\n");
+        return;
+    }
+
+    printf("Enter SAP ID: ");
+    sap = readSAP();
+
+    if (sap <= 0 || findStudent(sap) != -1) {
+        printf("Invalid or duplicate SAP ID.\n");
+        return;
+    }
+
+    students[count].sap = sap;
+
+    printf("Enter roll number: ");
+    readText(students[count].roll, 20);
+
+    printf("Enter name: ");
+    readText(students[count].name, 50);
+
+    printf("Enter phone number: ");
+    readText(students[count].phone, 15);
+
+    printf("Enter email: ");
+    readText(students[count].email, 50);
+
+    printf("Enter year (1-4): ");
+    year = readNumber();
+
+    if (year < 1 || year > 4) {
+        printf("Invalid year. Record not added.\n");
+        return;
+    }
+
+    printf("Enter current semester (1-8): ");
+    sem = readNumber();
+
+    if (sem < 1 || sem > 8 || (sem + 1) / 2 != year) {
+        printf("Semester does not match year.\n");
+        return;
+    }
+
+    students[count].year = year;
+    students[count].semester = sem;
+
+    for (j = 0; j < 8; j++) {
+        students[count].sgpa[j] = 0;
+    }
+
+    printf("Enter SGPA for completed semesters.\n");
+    printf("Enter 0 if result is unavailable.\n");
+
+    for (j = 0; j < sem; j++) {
+        printf("Semester %d SGPA: ", j + 1);
+        students[count].sgpa[j] = readSGPA();
+    }
+
+    count++;
+    printf("Student added successfully.\n");
+}
+
+void searchStudent() {
+    int i;
+    long long sap;
+
+    printf("Enter SAP ID to search: ");
+    sap = readSAP();
+
+    i = findStudent(sap);
+
+    if (i == -1) {
+        printf("Student not found.\n");
+    }
+    else {
+        printStudent(i);
+    }
+}
+
+void deleteStudent() {
+    int i, j;
+    long long sap;
+
+    printf("Enter SAP ID to delete: ");
+    sap = readSAP();
+
+    i = findStudent(sap);
+
+    if (i == -1) {
+        printf("Student not found.\n");
+        return;
+    }
+
+    for (j = i; j < count - 1; j++) {
+        students[j] = students[j + 1];
+    }
+
+    count--;
+    printf("Student deleted.\n");
+}
+
 int main() {
     int choice;
+
     do {
         printf("\n===== STUDENT RECORD MANAGEMENT SYSTEM =====\n");
         printf("1. Display all students\n");
-        printf("2. Exit\n");
+        printf("2. Add student\n");
+        printf("3. Search student\n");
+        printf("4. Delete student\n");
+        printf("5. Exit\n");
+
         printf("Enter choice: ");
         choice = readNumber();
+
         switch (choice) {
-            case 1: displayAll(); break;
-            case 2: printf("Goodbye!\n"); break;
-            default: printf("Invalid choice.\n");
+            case 1:
+                displayAll();
+                break;
+
+            case 2:
+                addStudent();
+                break;
+
+            case 3:
+                searchStudent();
+                break;
+
+            case 4:
+                deleteStudent();
+                break;
+
+            case 5:
+                printf("Goodbye!\n");
+                break;
+
+            default:
+                printf("Invalid choice.\n");
         }
-    } while (choice != 2);
+
+    } while (choice != 5);
+
     return 0;
 }
