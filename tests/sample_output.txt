@@ -1,12 +1,117 @@
-STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
-SAMPLE OUTPUT
 
-========================================
-TEST CASE 1 - EXCELLENT PERFORMANCE
-========================================
+Sample Output - Student Record and Result Management System
 
-Menu Choice: 9
-Enter SAP ID: 50001150
+Test Case 1 - Display All Students
+
+Expected Output:
+
+Displays the five preloaded students:
+
+Aarav Sharma
+Priya Singh
+Rohan Verma
+Neha Gupta
+Kabir Mehta
+
+Each record contains SAP ID, Roll Number, Name,
+Phone Number, Email, Year, Semester and SGPA.
+
+
+Test Case 2 - Add Student
+
+Expected Output:
+
+Student added successfully.
+
+
+Test Case 3 - Search Student
+
+Expected Output:
+
+SAP ID: 50001234
+Roll No: R001
+Name: Aarav Sharma
+Phone: 9876543210
+Email: aarav@gmail.com
+Year: 1
+Current Semester: 2
+Semester 1 SGPA: 8.50
+Semester 2 SGPA: 8.80
+
+Semesters 3 to 8: Not available
+
+
+Test Case 4 - Delete Student
+
+Expected Output:
+
+Student deleted.
+
+
+Test Case 5 - Calculate CGPA
+
+Expected Output:
+
+===== CGPA OF ALL STUDENTS =====
+
+Name: Aarav Sharma
+SAP ID: 50001234
+CGPA: 8.65
+
+Name: Priya Singh
+SAP ID: 50001211
+CGPA: 8.90
+
+Name: Rohan Verma
+SAP ID: 50001300
+CGPA: 7.98
+
+Name: Neha Gupta
+SAP ID: 50001150
+CGPA: 9.41
+
+Name: Kabir Mehta
+SAP ID: 50001280
+CGPA: 8.13
+
+
+Test Case 6 - Average CGPA by Year
+
+Expected Output:
+
+===== AVERAGE CGPA BY YEAR =====
+
+Year 1 Average CGPA: 8.65
+Year 2 Average CGPA: 8.52
+Year 3 Average CGPA: 7.98
+Year 4 Average CGPA: 9.41
+
+
+Test Case 7 - Sort by SAP ID
+
+Expected Order:
+
+50001150 - Neha Gupta
+50001211 - Priya Singh
+50001234 - Aarav Sharma
+50001280 - Kabir Mehta
+50001300 - Rohan Verma
+
+
+Test Case 8 - Sort by Name
+
+Expected Order:
+
+Aarav Sharma
+Kabir Mehta
+Neha Gupta
+Priya Singh
+Rohan Verma
+
+
+Test Case 9 - AI-Assisted Academic Advisor
+
+Case A - Excellent Performance
 
 ===== AI-ASSISTED ACADEMIC ADVISOR =====
 Student Name: Neha Gupta
@@ -14,15 +119,8 @@ CGPA: 9.41
 Excellent Performance
 Advice: Maintain your current study pattern.
 
-Result: PASS
 
-
-========================================
-TEST CASE 2 - GOOD PERFORMANCE
-========================================
-
-Menu Choice: 9
-Enter SAP ID: 50001234
+Case B - Good Performance
 
 ===== AI-ASSISTED ACADEMIC ADVISOR =====
 Student Name: Aarav Sharma
@@ -30,60 +128,26 @@ CGPA: 8.65
 Good Performance
 Advice: Keep practising and aim for higher grades.
 
-Result: PASS
 
-
-========================================
-TEST CASE 3 - NEEDS IMPROVEMENT
-========================================
-
-Menu Choice: 2
-
-Enter SAP ID: 50001400
-Enter roll number: R006
-Enter name: Test Student
-Enter phone number: 9876500000
-Enter email: test@example.com
-Enter year (1-4): 1
-Enter current semester (1-8): 2
-
-Enter SGPA for completed semesters.
-Enter 0 if result is unavailable.
-
-Semester 1 SGPA: 6.0
-Semester 2 SGPA: 5.5
+Case C - Needs Improvement
 
 Student added successfully.
 
-Menu Choice: 9
-Enter SAP ID: 50001400
-
 ===== AI-ASSISTED ACADEMIC ADVISOR =====
-Student Name: Test Student
+Student Name: Rahul Kumar
 CGPA: 5.75
 Needs Improvement
 Advice: Focus more on subjects with lower SGPA.
 
-Result: PASS
 
+Test Case 10 - Exit
 
-========================================
-EXIT
-========================================
-
-Menu Choice: 10
+Expected Output:
 
 Goodbye!
 
 
-========================================
 TEST SUMMARY
-========================================
 
-Test Case 1: Excellent Performance - PASS
-Test Case 2: Good Performance - PASS
-Test Case 3: Needs Improvement - PASS
-
-Total Test Cases: 3
-Passed: 3
-Failed: 0
+All 10 menu choices covered.
+Three different CGPA recommendation cases included.
