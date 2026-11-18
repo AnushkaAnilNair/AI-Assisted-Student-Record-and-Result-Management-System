@@ -1,39 +1,97 @@
-# Sample Input - Student Record and Result Management System
+Sample Input - Student Record and Result Management System
 
-## Test Case 1 - Excellent Performance
+Test Case 1 - Display All Students
 
-Menu Choice: 9  
-Enter SAP ID: 50001150
+Menu Choice: 1
 
-Student: Neha Gupta  
-SGPA Values: 9.5, 9.2, 9.4, 9.1, 9.6, 9.3, 9.5, 9.7
 
-## Test Case 2 - Good Performance
+Test Case 2 - Add Student
 
-Menu Choice: 9  
-Enter SAP ID: 50001234
-
-Student: Aarav Sharma  
-SGPA Values: 8.5, 8.8
-
-## Test Case 3 - Needs Improvement
-
-First, add a new student using Menu Choice 2.
-
-SAP ID: 50001400  
-Roll Number: R006  
-Name: Test Student  
-Phone Number: 9876500000  
-Email ID: test@example.com  
-Year: 1  
-Semester: 2  
-Semester 1 SGPA: 6.0  
-Semester 2 SGPA: 5.5
-
-Then select Menu Choice 9.
+Menu Choice: 2
 
 Enter SAP ID: 50001400
+Enter roll number: R006
+Enter name: Test Student
+Enter phone number: 9876500000
+Enter email: test@example.com
+Enter year (1-4): 1
+Enter current semester (1-8): 2
+Semester 1 SGPA: 6.0
+Semester 2 SGPA: 5.5
 
-## Exit
+
+Test Case 3 - Search Student
+
+Menu Choice: 3
+Enter SAP ID: 50001234
+
+
+Test Case 4 - Delete Student
+
+Menu Choice: 4
+Enter SAP ID: 50001400
+
+
+Test Case 5 - Calculate CGPA
+
+Menu Choice: 5
+
+
+Test Case 6 - Average CGPA by Year
+
+Menu Choice: 6
+
+
+Test Case 7 - Sort by SAP ID
+
+Menu Choice: 7
+
+
+Test Case 8 - Sort by Name
+
+Menu Choice: 8
+
+
+Test Case 9 - AI-Assisted Academic Advisor
+
+Case A - Excellent Performance
+
+Menu Choice: 9
+Enter SAP ID: 50001150
+
+Student: Neha Gupta
+SGPA: 9.5, 9.2, 9.4, 9.1, 9.6, 9.3, 9.5, 9.7
+
+
+Case B - Good Performance
+
+Menu Choice: 9
+Enter SAP ID: 50001234
+
+Student: Aarav Sharma
+SGPA: 8.5, 8.8
+
+
+Case C - Needs Improvement
+
+First add a student using Menu Choice 2.
+
+Enter SAP ID: 50001401
+Enter roll number: R007
+Enter name: Rahul Kumar
+Enter phone number: 9876500001
+Enter email: rahul@example.com
+Enter year (1-4): 1
+Enter current semester (1-8): 2
+Semester 1 SGPA: 6.0
+Semester 2 SGPA: 5.5
+
+Then:
+
+Menu Choice: 9
+Enter SAP ID: 50001401
+
+
+Test Case 10 - Exit
 
 Menu Choice: 10
